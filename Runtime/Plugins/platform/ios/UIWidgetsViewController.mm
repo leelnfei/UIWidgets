@@ -67,8 +67,9 @@
 
 
     // scale == 3 => screen is 1242 * 2208 => we have to perform down-sampling to obtain the real length
+    // 0.8696 = 1920 / 2208, the vertical down-sampling ratio
     if (scale == 3) {
-        bottom = bottom * 1920 / 2208;
+        bottom = bottom * 0.8696;
     }
 
     viewInsets.bottom = bottom * scale;
